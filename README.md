@@ -14,7 +14,7 @@ Here's some links to the key things
 
 * [Aeryn](org/aeryn.ts): Automatically invites new contributors to the Moya GitHub organization after their first merged pull request. You can find out more about this practice at the [Moya contributors repo](https://github.com/Moya/contributors).
 
-* [Labeler](org/labeler.ts): Attempts to automatically label newly created issues based on keywords in their title.
+* [Labeler](moya/labeler.ts): Attempts to automatically label newly created issues based on keywords in their title.
 
 * [DocLinker](moya/doclinker.ts): When an issue is labeled as a question, the bot attempts to recommend useful documentation based on keywords in the issue's title.
 
