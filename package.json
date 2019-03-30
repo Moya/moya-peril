@@ -7,6 +7,7 @@
   "scripts": {
     "test": "jest test"
   },
+  "homepage": "https://github.com/Moya/peril",
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^22.2.3",
