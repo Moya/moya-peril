@@ -59,7 +59,9 @@ describe("a merged PR", () => {
         checkMembership: async () => {
           throw new Error("Not a member");
         },
-        addOrgMembership: inviteMock
+      },
+      teams: {
+        addOrUpdateMembershipInOrg: inviteMock
       }
     };
     return aeryn().then(() => {
@@ -77,7 +79,9 @@ describe("a merged PR", () => {
         checkMembership: async () => {
           throw new Error("Not a member");
         },
-        addOrgMembership: inviteMock
+      },
+      teams: {
+        addOrUpdateMembershipInOrg: inviteMock
       }
     };
     return aeryn().then(() => {
