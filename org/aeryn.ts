@@ -50,7 +50,7 @@ export const aeryn = wrap(
         const mergedPrCount = res.data.total_count;
         if (mergedPrCount === 1) {
           markdown(inviteMarkdown);
-          await api.orgs.addOrgMembership({ org, username, role: "member" });
+          await api.orgs.addOrUpdateMembership({ org, username, role: "member" });
         }
       });
     }
