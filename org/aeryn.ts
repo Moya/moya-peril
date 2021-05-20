@@ -28,6 +28,11 @@ export const aeryn = wrap(
       return;
     }
 
+    if (pr.user.type !== "User") {
+      // Ignore PRs from bots.
+      return
+    }
+
     const org = "Moya";
     const inviteMarkdown = `
   @${username} Thanks a lot for contributing to Moya! We've invited you to join 
