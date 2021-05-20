@@ -9,7 +9,8 @@ beforeEach(() => {
     github: {
       pr: {
         user: {
-          login: "a_new_user"
+          login: "a_new_user",
+          type: "User"
         }
       }
     }
@@ -34,6 +35,13 @@ describe("a merged PR", () => {
   beforeEach(() => {
     dm.danger.github.pr.merged = true;
   });
+
+  it("doesn't do anything if the PR was sent by a bot", () => {
+    dm.danger.github.pr.user.type = "Bot"
+    return aeryn().then(() => {
+      expect(dm.markdown).not.toHaveBeenCalled()
+    })
+  })
 
   it("doesn't do anything if the user is a member", () => {
     dm.danger.github.api = {
